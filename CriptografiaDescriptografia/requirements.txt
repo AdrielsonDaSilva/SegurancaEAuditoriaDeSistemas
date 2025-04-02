@@ -1,0 +1,15 @@
+# Requisitos do sistema:
+# Python >= 3.6
+# pip >= 21.0
+
+# Para instalar o Python:
+# 1. Baixe o Python do site oficial: https://www.python.org/downloads/
+# 2. Durante a instalação, marque a opção "Add Python to PATH"
+# 3. Para verificar a instalação, abra o terminal e digite: python --version
+
+# Para instalar/atualizar o pip:
+# 1. Baixe o script get-pip.py: https://bootstrap.pypa.io/get-pip.py
+# 2. Execute: python get-pip.py
+# 3. Para verificar a instalação, digite: pip --version
+
+# As demais dependências serão instaladas automaticamente.
