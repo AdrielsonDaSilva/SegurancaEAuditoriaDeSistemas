@@ -29,11 +29,11 @@ Os modos de operação definem como os blocos de dados são processados. Os cinc
 
 **a) Electronic Codebook (ECB)**
 * **Características:** É o modo mais simples, onde cada bloco de texto claro é cifrado de forma independente dos outros. A principal desvantagem é que blocos de texto claro idênticos geram blocos de texto cifrado idênticos, o que pode revelar padrões nos dados.
-* **Diagrama de Bloco:** O diagrama está ilustrado no documento "modos.pdf" (página 29).
+* **Diagrama de Bloco:** O diagrama está ilustrado no documento "Criptografia Moderna  Cifras de Bloco e de Fluxo.pdf" (página 29).
 
 **b) Cipher Block Chaining (CBC)**
 * **Características:** Neste modo, cada bloco de texto claro é combinado (via XOR) com o bloco cifrado anterior antes da criptografia, utilizando um Vetor de Inicialização (IV) para o primeiro bloco. Isso garante que blocos de texto claro idênticos resultem em blocos cifrados diferentes.
-* **Diagrama de Bloco:** O diagrama está disponível no documento "modos.pdf" (página 37).
+* **Diagrama de Bloco:** O diagrama está disponível no documento "Criptografia Moderna  Cifras de Bloco e de Fluxo.pdf" (página 37).
 
 **4. Por que existe a necessidade de usar padding?**
 
@@ -41,7 +41,7 @@ Cifras de bloco como DES, 3DES e AES operam em blocos de dados de tamanho fixo. 
 
 **5. Cite e explique 4 tipos de paddding.**
 
-O documento "modos.pdf" (páginas 54-55) apresenta vários padrões, incluindo:
+O documento "Criptografia Moderna  Cifras de Bloco e de Fluxo.pdf" (páginas 54-55) apresenta vários padrões, incluindo:
 1.  **Zero padding:** O último bloco é preenchido com bytes `0x00`.
 2.  **ANSI X.923:** O bloco é preenchido com bytes `0x00`, e o último byte indica a quantidade de bytes de preenchimento adicionados.
 3.  **ISO/IEC 7816-4:** Adiciona-se um byte `0x80` e o restante é preenchido com bytes `0x00`.
@@ -65,7 +65,7 @@ O **PKCS#7** é um excelente método de padding, pois é inequívoco. O valor do
 
 **8. Utilizando o bloco abaixo, que representa a cifra DES, monte o diagrama de bloco:**
 * **a) Criptografar a mensagem com tamanho de 24 bytes, modo de operação CFB, algoritmo DES.**
-    * O diagrama está representado textualmente abaixo, com base no esquema do documento "modos.pdf" (página 42).
+    * O diagrama está representado textualmente abaixo, com base no esquema do documento "Criptografia Moderna  Cifras de Bloco e de Fluxo.pdf" (página 42).
     ```
                                  Vetor de Inicialização (IV)
                                             |
@@ -82,7 +82,7 @@ O **PKCS#7** é um excelente método de padding, pois é inequívoco. O valor do
                                                 Bloco Cifrado 1 (C1) --> (Alimenta próximo passo)
     ```
 * **b) Decriptografar a mensagem com tamanho de 16 bytes, modo de operação CBC, algoritmo 3DES, chave de 168 bits.**
-    * O diagrama está representado textualmente abaixo, com base nos esquemas de "modos.pdf" (página 37) e "algoritmo.pdf" (páginas 16, 18).
+    * O diagrama está representado textualmente abaixo, com base nos esquemas de "Criptografia Moderna  Cifras de Bloco e de Fluxo.pdf" (página 37) e "Algoritmos de Criptografia  DES, 3DES e AES.pdf" (páginas 16, 18).
     ```
      Bloco Cifrado 1 (C1) --------------------------------+
             |                                             |
@@ -185,7 +185,7 @@ Isso é feito para permitir a **verificação de integridade dos dados**. O usu�
 
 **21. Cite 3 exemplos de algoritmos de hash, apresentando o tamanho do bloco, do resumo e sua segurança (em bits).**
 
-A tabela no documento "Criptográfico.pdf" fornece as seguintes informações:
+A tabela no documento "Criptografia Moderna  Hash Criptográfico.pdf" fornece as seguintes informações:
 1.  **MD5:**
     * Tamanho do Bloco: 512 bits
     * Tamanho do Resumo: 128 bits
@@ -205,7 +205,7 @@ A tabela no documento "Criptográfico.pdf" fornece as seguintes informações:
 
 **23. Faça um desenho esquemático para a geração e verificação de uma mensagem de autenticação utilizando HMAC.**
 
-O processo, conforme descrito e ilustrado no documento "Criptográfico.pdf" (páginas 23-24), é o seguinte:
+O processo, conforme descrito e ilustrado no documento "Criptografia Moderna  Hash Criptográfico.pdf" (páginas 23-24), é o seguinte:
 * **1. Geração (Remetente):** O remetente combina a mensagem com uma chave secreta e aplica a função HMAC, gerando uma *tag* HMAC.
 * **2. Envio:** O remetente envia a mensagem original junto com a *tag* HMAC.
 * **3. Verificação (Destinatário):** O destinatário recebe a mensagem e a *tag*. Usando a mesma chave secreta, ele recalcula a *tag* HMAC a partir da mensagem recebida.
